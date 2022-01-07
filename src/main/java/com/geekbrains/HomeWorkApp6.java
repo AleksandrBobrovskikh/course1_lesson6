@@ -5,6 +5,10 @@ class Animal {
     protected static int animalCount = 0;
     protected static int catCount = 0;
     protected static int dogCount = 0;
+    protected int catMaxRunValue = 200;
+    protected int dogMaxRunValue = 500;
+    protected int dogMaxSwimValue = 10;
+
 
     public Animal(String name) {
         this.name = name;
@@ -20,15 +24,15 @@ class Animal {
         this.name = name;
     }
 
-    public void run (int meters){
+    public void run(int meters) {
         System.out.println(name + " пробежал " + meters + " m.");
     }
 
-    public void swim (int meters){
+    public void swim(int meters) {
         System.out.println(name + " проплыл " + meters + " m.");
     }
 
-    public static void animalInfo(){
+    public static void animalInfo() {
         System.out.println();
         System.out.println("Всего создано животных: " + animalCount);
         System.out.println("Из них котов: " + catCount);
@@ -45,15 +49,15 @@ class Cat extends Animal {
     }
 
     @Override
-    public void run(int meters){
-        if (meters > 200)
+    public void run(int meters) {
+        if (meters > catMaxRunValue)
             System.out.println("Кот по имени " + name + " не смог пробежать " + meters + "м, и умер. " + '\u2639');
         else
             System.out.println("Кот по имени " + name + " пробежал " + meters + "м.");
     }
 
     @Override
-    public void swim(int meters){
+    public void swim(int meters) {
         System.out.println(name + " не умеет плавать и " + meters + "м ему не под силу.");
     }
 }
@@ -67,7 +71,7 @@ class Dog extends Animal {
 
     @Override
     public void run(int meters) {
-        if (meters > 500)
+        if (meters > dogMaxRunValue)
             System.out.println("Пёс по имени " + name + " не смог пробежать " + meters + "м, и умер. " + '\u2639');
         else
             System.out.println("Пёс по имени " + name + " пробежал " + meters + "м.");
@@ -75,7 +79,7 @@ class Dog extends Animal {
 
     @Override
     public void swim(int meters) {
-        if (meters > 10)
+        if (meters > dogMaxSwimValue)
             System.out.println("Пёс по имени " + name + " не смог проплыть " + meters + "м, и утонул. " + '\u2639');
         else
             System.out.println("Пёс по имени " + name + " проплыл " + meters + "м.");
@@ -99,5 +103,5 @@ public class HomeWorkApp6 {
 
         Animal.animalInfo();
 
-        }
     }
+}
