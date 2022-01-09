@@ -1,7 +1,7 @@
 package com.geekbrains;
 
 class Animal {
-    protected String name;
+    private String name;
     protected static int animalCount = 0;
     protected static int catCount = 0;
     protected static int dogCount = 0;
@@ -14,7 +14,7 @@ class Animal {
         animalCount++;
     }
 
-    protected String getName() {
+    public String getName() {
         return name;
     }
 
