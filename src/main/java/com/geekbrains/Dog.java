@@ -22,4 +22,5 @@ class Dog extends Animal {
         else
             System.out.println("Пёс по имени " + name + " проплыл " + meters + "м.");
     }
+
 }
