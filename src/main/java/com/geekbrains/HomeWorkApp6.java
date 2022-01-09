@@ -41,50 +41,9 @@ class Animal {
 
 }
 
-class Cat extends Animal {
 
-    public Cat(String name) {
-        super(name);
-        catCount++;
-    }
 
-    @Override
-    public void run(int meters) {
-        if (meters > catMaxRunValue)
-            System.out.println("Кот по имени " + name + " не смог пробежать " + meters + "м, и умер. " + '\u2639');
-        else
-            System.out.println("Кот по имени " + name + " пробежал " + meters + "м.");
-    }
 
-    @Override
-    public void swim(int meters) {
-        System.out.println(name + " не умеет плавать и " + meters + "м ему не под силу.");
-    }
-}
-
-class Dog extends Animal {
-
-    public Dog(String name) {
-        super(name);
-        dogCount++;
-    }
-
-    @Override
-    public void run(int meters) {
-        if (meters > dogMaxRunValue)
-            System.out.println("Пёс по имени " + name + " не смог пробежать " + meters + "м, и умер. " + '\u2639');
-        else
-            System.out.println("Пёс по имени " + name + " пробежал " + meters + "м.");
-    }
-
-    @Override
-    public void swim(int meters) {
-        if (meters > dogMaxSwimValue)
-            System.out.println("Пёс по имени " + name + " не смог проплыть " + meters + "м, и утонул. " + '\u2639');
-        else
-            System.out.println("Пёс по имени " + name + " проплыл " + meters + "м.");
-    }
-}
 
 public class HomeWorkApp6 {
     public static void main(String[] args) {
