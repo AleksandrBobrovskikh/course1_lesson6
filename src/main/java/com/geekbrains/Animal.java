@@ -23,10 +23,12 @@ class Animal {
     }
 
     public void run(int meters) {
-            }
+        System.out.println(name + " пробежал " + meters + " m.");
+    }
 
     public void swim(int meters) {
-            }
+        System.out.println(name + " проплыл " + meters + " m.");
+    }
 
     public static void animalInfo() {
         System.out.println();
@@ -35,5 +37,4 @@ class Animal {
         System.out.println("Из них собак: " + dogCount);
     }
 }
-
 
